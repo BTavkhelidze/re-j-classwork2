@@ -18,14 +18,12 @@ const inc5 = document.querySelector('.inc5');
 const dec5 = document.querySelector('.dec5');
 
 incrementBtn.addEventListener('click', () => {
-  console.log('hello');
   counter++;
 
   return (counterPlace.textContent = counter);
 });
 
 decrementBtn.addEventListener('click', () => {
-  console.log('hello');
   counter--;
 
   return (counterPlace.textContent = counter);
