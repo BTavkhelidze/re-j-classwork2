@@ -57,6 +57,9 @@ const input = document.querySelector('.passInput');
 const passCheckBtn = document.querySelector('.passCheck');
 
 const messagePass = document.createElement('p');
+const password = createElement('p');
+password.textContent = input.value;
+
 const sec2 = document.querySelector('.ex2');
 
 let checkPasswordStrength = (pass) => {
@@ -65,14 +68,14 @@ let checkPasswordStrength = (pass) => {
   } else if (pass.length === 0) {
     messagePass.textContent = 'please enter the Password';
   } else if (pass.length < 8) {
-    messagePass.textContent = 'password is too short';
+    messagePass.textContent = 'Password is too short';
   } else if (pass.length > 16) {
-    messagePass.textContent = 'password is too long';
+    messagePass.textContent = 'Password is too long';
   }
 };
 
+sec2.appendChild(password);
 sec2.appendChild(messagePass);
-
 passCheckBtn.addEventListener('click', () => {
   checkPasswordStrength(input.value);
 });
